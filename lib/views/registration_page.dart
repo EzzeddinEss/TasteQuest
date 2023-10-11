@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:tastequest/viewmodels/auth_view_model.dart';
 import 'package:tastequest/views/welcome_page.dart';
 import 'package:tastequest/widgets/background_image.dart';
@@ -8,8 +7,9 @@ import 'package:tastequest/widgets/custom_elevated_button.dart';
 import 'package:tastequest/widgets/custom_text_form_field.dart';
 import 'package:tastequest/widgets/custom_text_span.dart';
 
+/// The registration page widget that allows users to register a new account.
 class RegistrationPage extends GetWidget<AuthViewModel> {
-  const RegistrationPage({super.key});
+  const RegistrationPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,17 +31,19 @@ class RegistrationPage extends GetWidget<AuthViewModel> {
                       Row(
                         children: [
                           IconButton(
-                              onPressed: () {
-                                Get.offAll(() => const WelcomePage());
-                              },
-                              icon: const Icon(Icons.arrow_back_sharp),
-                              color: Colors.white),
+                            onPressed: () {
+                              Get.offAll(() => const WelcomePage());
+                            },
+                            icon: const Icon(Icons.arrow_back_sharp),
+                            color: Colors.white,
+                          ),
                           const Text(
                             'Register New User',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
                           ),
                         ],
                       ),
@@ -55,7 +57,8 @@ class RegistrationPage extends GetWidget<AuthViewModel> {
                         validate: (value) {
                           if (value == null) {
                             print(
-                                "this field cannot be empty, please write your name");
+                              "This field cannot be empty, please write your name.",
+                            );
                           }
                         },
                         khintText: 'Please write your name',
@@ -115,7 +118,7 @@ class RegistrationPage extends GetWidget<AuthViewModel> {
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }
