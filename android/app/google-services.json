@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1031196804835",
+    "project_id": "tastequest-d0dcb",
+    "storage_bucket": "tastequest-d0dcb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031196804835:android:1bf414c5ba5dcec96da7d6",
+        "android_client_info": {
+          "package_name": "com.ezz.onbit.tastequest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA9TLmgN9GuvTsqmRR9b0ieVyf6oF1P8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
